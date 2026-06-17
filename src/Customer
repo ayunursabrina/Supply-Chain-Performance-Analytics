@@ -1,0 +1,95 @@
+public class Customer {
+    private String customerId;
+    private String acquisitionDate;
+    private double acquisitionCostUsd;
+    private String marketSegment;
+    private String supplierId;
+    private String orderId;
+    private String orderDate;
+    private double orderValueUsd;
+    private String paymentDate;
+    private int satisfactionScore;
+    private int supportTickets;
+    private int leadTimeDays;
+
+    public Customer(String customerId, String acquisitionDate,
+                    double acquisitionCostUsd, String marketSegment,
+                    String supplierId, String orderId,
+                    String orderDate, double orderValueUsd,
+                    String paymentDate, int satisfactionScore,
+                    int supportTickets, int leadTimeDays) {
+
+        this.customerId = customerId;
+        this.acquisitionDate = acquisitionDate;
+        this.acquisitionCostUsd = acquisitionCostUsd;
+        this.marketSegment = marketSegment;
+        this.supplierId = supplierId;
+        this.orderId = orderId;
+        this.orderDate = orderDate;
+        this.orderValueUsd = orderValueUsd;
+        this.paymentDate = paymentDate;
+        this.satisfactionScore = satisfactionScore;
+        this.supportTickets = supportTickets;
+        this.leadTimeDays = leadTimeDays;
+    }
+    public String getCustomerId() {
+        return customerId;
+    }
+    public String getAcquisitionDate() {
+        return acquisitionDate;
+    }
+    public double getAcquisitionCostUsd() {
+        return acquisitionCostUsd;
+    }
+    public String getMarketSegment() {
+        return marketSegment;
+    }
+    public String getSupplierId() {
+        return supplierId;
+    }
+    public String getOrderId() {
+        return orderId;
+    }
+    public String getOrderDate() {
+        return orderDate;
+    }
+    public double getOrderValueUsd() {
+        return orderValueUsd;
+    }
+    public String getPaymentDate() {
+        return paymentDate;
+    }
+    public int getSatisfactionScore() {
+        return satisfactionScore;
+    }
+    public int getSupportTickets() {
+        return supportTickets;
+    }
+    public int getLeadTimeDays() {
+        return leadTimeDays;
+    }
+    public void setCustomerId(String customerId) {
+        this.customerId = customerId;
+    }
+    public void setOrderValueUsd(double orderValueUsd) {
+        this.orderValueUsd = orderValueUsd;
+    }
+    public void setSatisfactionScore(int satisfactionScore) {
+        this.satisfactionScore = satisfactionScore;
+    }
+
+    @Override
+    public String toString() {
+        return String.format(
+            "Customer ID: %-10s | Segment: %-12s | Acquisition Cost: %-10.2f | Order ID: %-12s | Order Value: %-10.2f | Satisfaction: %-3d | Support Tickets: %-3d | Lead Time: %-3d",
+            customerId,
+            marketSegment,
+            acquisitionCostUsd,
+            orderId,
+            orderValueUsd,
+            satisfactionScore,
+            supportTickets,
+            leadTimeDays
+        );
+    }
+}
